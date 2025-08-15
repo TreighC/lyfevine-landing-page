@@ -11,28 +11,40 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-20 bg-surface">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Why Lyfevine?
+    <section id="why-lyfevine" className="py-24 bg-gradient-to-br from-surface to-surface-alt relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`, backgroundSize: '20px 20px' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-block p-1 bg-gradient-brand rounded-full mb-6">
+            <div className="bg-surface px-6 py-2 rounded-full">
+              <span className="text-brand-green font-semibold">Why Choose Lyfevine?</span>
+            </div>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+            Feel better, move better,<br />
+            <span className="text-brand-green">live better</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Feel better, move better, live better — with guidance that fits your life.
+            With guidance that fits your life, goals, and schedule.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-soft hover:shadow-medium transition-shadow"
+                className="group flex items-start gap-4 p-8 bg-card rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 border border-border/50 hover:border-brand-green/30"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex-shrink-0 w-6 h-6 bg-brand-green rounded-full flex items-center justify-center mt-1">
-                  <Check className="w-4 h-4 text-white" />
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-brand rounded-full flex items-center justify-center mt-1 group-hover:scale-110 transition-transform">
+                  <Check className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-foreground font-medium leading-relaxed">
+                <p className="text-foreground font-medium leading-relaxed text-lg group-hover:text-brand-green transition-colors">
                   {benefit}
                 </p>
               </div>

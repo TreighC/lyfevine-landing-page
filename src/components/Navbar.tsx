@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import lyfevineLogoIcon from "@/assets/lyfevine-logo.png";
-import lyfevineText from "@/assets/lyfevine-text.png";
+import lyfevineLogoIcon from "@/assets/lyfevine-logo.jpg";
+import lyfevineText from "@/assets/lyfevine-text.jpg";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
@@ -23,24 +23,27 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-foreground hover:text-brand-green transition-colors">
-              How It Works
+            <a href="#browse" className="text-white/90 hover:text-white font-medium transition-colors">
+              Browse
             </a>
-            <a href="#services" className="text-foreground hover:text-brand-green transition-colors">
+            <a href="#services" className="text-white/90 hover:text-white font-medium transition-colors">
               Services
             </a>
-            <a href="#why-lyfevine" className="text-foreground hover:text-brand-green transition-colors">
-              Why Lyfevine
+            <a href="#about" className="text-white/90 hover:text-white font-medium transition-colors">
+              About
+            </a>
+            <a href="#contact" className="text-white/90 hover:text-white font-medium transition-colors">
+              Contact
             </a>
           </div>
 
-          {/* CTA Buttons */}
+          {/* Auth Buttons */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
-              Log In
+            <Button variant="ghost" className="hidden sm:inline-flex text-white/90 hover:text-white hover:bg-white/10">
+              Sign In
             </Button>
-            <Button variant="default">
-              Get Started
+            <Button className="bg-brand-green hover:bg-brand-green-dark text-white">
+              Sign Up
             </Button>
           </div>
         </div>

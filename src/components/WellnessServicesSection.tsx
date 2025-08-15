@@ -32,27 +32,44 @@ const WellnessServicesSection = () => {
               <Badge 
                 key={index}
                 variant="secondary"
-                className="px-6 py-3 text-base bg-card hover:bg-brand-green hover:text-white transition-colors cursor-pointer shadow-soft hover:shadow-medium"
+                className="px-6 py-3 text-base bg-card border border-border text-foreground hover:bg-brand-green hover:text-white transition-all duration-300 cursor-pointer shadow-soft hover:shadow-medium hover:scale-105"
               >
                 {service}
               </Badge>
             ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-shadow">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                <span className="text-white text-xl">💪</span>
+              </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Physical Wellness</h3>
               <p className="text-muted-foreground">Personal training, yoga, massage therapy, and self-defense to keep your body strong and healthy.</p>
             </div>
             
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-shadow">
+            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🧠</span>
+              </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Mental Wellness</h3>
-              <p className="text-muted-foreground">Meditation, life coaching, and energy healing to nurture your mental and emotional well-being.</p>
+              <p className="text-muted-foreground">Meditation, life coaching, and cognitive training to strengthen your mental clarity and focus.</p>
             </div>
             
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-shadow">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Nutritional Health</h3>
-              <p className="text-muted-foreground">Expert nutrition guidance and health coaching to fuel your body and optimize your lifestyle.</p>
+            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                <span className="text-white text-xl">❤️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Emotional Wellness</h3>
+              <p className="text-muted-foreground">Therapy, counseling, and emotional support to help you process and heal from life's challenges.</p>
+            </div>
+            
+            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🙏</span>
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Spiritual Wellness</h3>
+              <p className="text-muted-foreground">Energy healing, spiritual guidance, and practices to connect with your inner self and purpose.</p>
             </div>
           </div>
         </div>
