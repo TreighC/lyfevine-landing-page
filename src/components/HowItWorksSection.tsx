@@ -1,75 +1,81 @@
-import { Search, Users, PlayCircle } from "lucide-react";
+import { Search, UserPlus, Rocket, ArrowRight } from "lucide-react";
 
 const HowItWorksSection = () => {
   const steps = [
     {
-      number: "1",
+      number: "01",
       icon: Search,
       title: "Choose Your Provider",
-      description: "Get smart suggestions from AI, or filter and browse providers yourself."
+      description: "Get smart suggestions from AI, or filter and browse providers yourself.",
+      color: "from-blue-400 to-blue-600"
     },
     {
-      number: "2", 
-      icon: Users,
+      number: "02", 
+      icon: UserPlus,
       title: "Compare and Connect",
-      description: "View profiles, transparent pricing, and reviews. Book and pay seamlessly and securely."
+      description: "View profiles, transparent pricing, and reviews. Book and pay seamlessly and securely.",
+      color: "from-brand-green to-brand-green-dark"
     },
     {
-      number: "3",
-      icon: PlayCircle,
+      number: "03",
+      icon: Rocket,
       title: "Start Your Journey", 
-      description: "Free consultation, message and meet your pro, and discover everything handled in-app."
+      description: "Free consultation, message and meet your pro, and discover everything handled in-app.",
+      color: "from-purple-400 to-purple-600"
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-background relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-brand-green rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-brand-green-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+    <section className="py-32 bg-gradient-to-br from-brand-navy via-brand-navy to-brand-green-dark text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-glow rounded-full blur-3xl opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-green-light rounded-full blur-2xl opacity-20 animate-float"></div>
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-2 rounded-full mb-6 text-sm font-semibold">
-            <span>🚀</span>
-            <span>Simple Process</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Get Started in <span className="text-brand-green">Minutes</span>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in">
+            Get Started in <span className="gradient-text">Minutes</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Three simple steps to connect with your perfect wellness professional
+          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            Simple steps to connect with your perfect wellness professional
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="text-center group relative">
-                <div className="relative mb-10">
-                  {/* Connecting Line */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-brand-green to-brand-green-light transform translate-x-8 z-0"></div>
-                  )}
-                  
-                  {/* Step Number Circle */}
-                  <div className="relative z-10 w-20 h-20 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-strong group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(76,175,80,0.5)]">
-                    {step.number}
+              <div key={index} className="group relative">
+                {/* Connecting Line */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-gradient-to-r from-white/30 to-transparent transform -translate-y-1/2 z-0">
+                    <ArrowRight className="absolute right-0 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
                   </div>
+                )}
+                
+                <div className="glass-card p-10 rounded-3xl text-center hover:scale-105 transition-all duration-500 border border-white/10 hover:border-white/30 animate-slide-up relative z-10"
+                     style={{ animationDelay: `${index * 0.2}s` }}>
                   
-                  {/* Icon */}
-                  <div className="w-14 h-14 bg-card border-2 border-border rounded-xl flex items-center justify-center mx-auto group-hover:bg-brand-green group-hover:text-white group-hover:border-brand-green transition-all duration-300 shadow-soft">
-                    <step.icon className="w-7 h-7" />
+                  {/* Step Number */}
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center font-bold text-white shadow-glow`}>
+                      {step.number}
+                    </div>
                   </div>
-                </div>
 
-                <div className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 group-hover:-translate-y-2 border border-border/50 hover:border-brand-green/30">
-                  <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-brand-green transition-colors">
+                  {/* Icon */}
+                  <div className="mb-8 pt-6">
+                    <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-glow`}>
+                      <step.icon className="w-10 h-10 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green-light transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
+                  <p className="text-white/80 leading-relaxed text-lg">
                     {step.description}
                   </p>
                 </div>

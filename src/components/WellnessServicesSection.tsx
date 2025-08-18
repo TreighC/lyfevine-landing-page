@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Dumbbell, Brain, Heart, Lotus } from "lucide-react";
 
 const WellnessServicesSection = () => {
   const services = [
@@ -13,64 +13,91 @@ const WellnessServicesSection = () => {
     "Energy Healing"
   ];
 
-  return (
-    <section id="services" className="py-20 bg-surface-alt">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Explore Health & Wellness Services
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Whether you're ready to dive in or just browsing for inspiration, 
-            Lyfevine offers a wide range of services to support your lifestyle.
-          </p>
-        </div>
+  const healthCategories = [
+    {
+      icon: Dumbbell,
+      title: "Physical Health",
+      description: "Strengthen your body, improve fitness, and enhance physical performance",
+      gradient: "from-red-400 to-orange-500"
+    },
+    {
+      icon: Brain,
+      title: "Mental Health", 
+      description: "Sharpen your mind, reduce stress, and improve cognitive function",
+      gradient: "from-blue-400 to-purple-500"
+    },
+    {
+      icon: Heart,
+      title: "Emotional Health",
+      description: "Balance emotions, build resilience, and enhance emotional intelligence", 
+      gradient: "from-pink-400 to-rose-500"
+    },
+    {
+      icon: Lotus,
+      title: "Spiritual Health",
+      description: "Connect with purpose, find inner peace, and explore spiritual growth",
+      gradient: "from-green-400 to-teal-500"
+    }
+  ];
 
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+  return (
+    <section className="py-32 bg-gradient-to-br from-surface to-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-glow rounded-full blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-fade-in">
+            Explore Health & <span className="gradient-text">Wellness Services</span>
+          </h2>
+          
+          {/* Services Tags */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-4xl mx-auto">
             {services.map((service, index) => (
-              <Badge 
+              <span 
                 key={index}
-                variant="secondary"
-                className="px-6 py-3 text-base bg-card border border-border text-foreground hover:bg-brand-green hover:text-white transition-all duration-300 cursor-pointer shadow-soft hover:shadow-medium hover:scale-105"
+                className="glass-card px-6 py-3 rounded-full text-foreground font-medium border border-border/50 hover:border-brand-green/50 transition-all duration-300 hover:scale-105 hover:shadow-glow animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {service}
-              </Badge>
+              </span>
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-white text-xl">💪</span>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Whether you're ready to dive in or just browsing for inspiration, Lyfevine offers a wide range of services to support your lifestyle.
+          </p>
+        </div>
+
+        {/* Health Categories */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {healthCategories.map((category, index) => (
+              <div 
+                key={index}
+                className="group glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-500 border border-border/50 hover:border-brand-green/30 hover:shadow-strong animate-slide-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${category.gradient} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-glow`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-brand-green transition-colors">
+                  {category.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {category.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Physical Wellness</h3>
-              <p className="text-muted-foreground">Personal training, yoga, massage therapy, and self-defense to keep your body strong and healthy.</p>
-            </div>
-            
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🧠</span>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Mental Wellness</h3>
-              <p className="text-muted-foreground">Meditation, life coaching, and cognitive training to strengthen your mental clarity and focus.</p>
-            </div>
-            
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
-              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-white text-xl">❤️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Emotional Wellness</h3>
-              <p className="text-muted-foreground">Therapy, counseling, and emotional support to help you process and heal from life's challenges.</p>
-            </div>
-            
-            <div className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-brand-green/30">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🙏</span>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Spiritual Wellness</h3>
-              <p className="text-muted-foreground">Energy healing, spiritual guidance, and practices to connect with your inner self and purpose.</p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

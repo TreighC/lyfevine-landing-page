@@ -6,17 +6,20 @@
 
 @layer base {
   :root {
-    /* Brand Colors */
+    /* Brand Colors - Updated for modern appeal */
     --brand-navy: 210 81% 21%;
     --brand-green: 142 71% 45%;
-    --brand-green-light: 142 71% 55%;
+    --brand-green-light: 142 71% 65%;
     --brand-green-dark: 142 71% 35%;
+    --brand-accent: 160 50% 50%;
+    --brand-glow: 142 100% 85%;
     
     /* Background System */
     --background: 0 0% 100%;
     --foreground: 210 81% 21%;
     --surface: 210 17% 98%;
     --surface-alt: 210 17% 95%;
+    --surface-glass: 0 0% 100% / 0.8;
 
     /* Component Colors */
     --card: 0 0% 100%;
@@ -44,15 +47,19 @@
     --input: 210 17% 90%;
     --ring: 142 71% 45%;
 
-    /* Gradients */
+    /* Modern Gradients */
     --gradient-brand: linear-gradient(135deg, hsl(var(--brand-navy)), hsl(var(--brand-green-dark)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-navy) / 0.9), hsl(var(--brand-green-dark) / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-navy) / 0.85), hsl(var(--brand-green-dark) / 0.75));
     --gradient-accent: linear-gradient(90deg, hsl(var(--brand-green-light)), hsl(var(--brand-green)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--surface-glass)), hsl(var(--surface-glass)));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--brand-glow) / 0.3), transparent 70%);
 
-    /* Shadows */
+    /* Modern Shadows & Effects */
     --shadow-soft: 0 4px 20px hsl(var(--brand-navy) / 0.08);
     --shadow-medium: 0 8px 30px hsl(var(--brand-navy) / 0.12);
     --shadow-strong: 0 20px 50px hsl(var(--brand-navy) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--brand-green) / 0.3);
+    --blur-glass: blur(10px);
 
     --radius: 0.5rem;
 
@@ -118,6 +125,43 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Modern Component Styles */
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-soft;
+  }
+  
+  .floating-nav {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-green-light to-brand-green bg-clip-text text-transparent;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--brand-green) / 0.2); }
+  50% { box-shadow: 0 0 40px hsl(var(--brand-green) / 0.4), 0 0 60px hsl(var(--brand-green) / 0.2); }
 }

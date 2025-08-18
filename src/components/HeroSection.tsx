@@ -1,67 +1,83 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Play, Sparkles } from "lucide-react";
 import heroWellnessPro from "@/assets/hero-wellness-pro.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <video 
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
         autoPlay 
         muted 
         loop 
         playsInline
       >
-        {/* Placeholder for video - you'll need to add the actual video file */}
+        <source src="/wellness-hero-video.mp4" type="video/mp4" />
         <source src="/placeholder-wellness-video.mp4" type="video/mp4" />
-        {/* Fallback background */}
       </video>
       
-      {/* Overlay */}
+      {/* Dynamic Overlay */}
       <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="relative z-10 container mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in leading-tight">
-              Find Your Health &{" "}
-              <span className="text-brand-green-light">Wellness Pro</span>
-            </h1>
-            
-            <p className="text-xl text-white/90 mb-8 leading-relaxed animate-slide-in-left max-w-lg">
-              AI does the heavy lifting — helping you find a pro who aligns with your goals, 
-              your needs, and your life. Or, explore on your own.
-            </p>
+          <div className="text-center lg:text-left space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in">
+                Find Your Health &{" "}
+                <span className="gradient-text">Wellness Pro</span>
+              </h1>
+              
+              <p className="text-xl text-white/90 leading-relaxed animate-slide-in-left max-w-lg">
+                AI does the heavy lifting — helping you find a pro who aligns with your goals, 
+                your needs, and your life. Or, explore on your own.
+              </p>
+            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
-              <Button size="lg" className="bg-brand-green hover:bg-brand-green-dark text-white shadow-medium transform hover:scale-105 transition-transform">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                size="lg" 
+                className="group bg-brand-green hover:bg-brand-green-dark text-white shadow-glow transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg"
+              >
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start Your Journey
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="glass-card border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
+              >
                 Browse Pros
               </Button>
             </div>
 
-            <p className="text-white/70 text-sm">
-              Free to explore. No sign up required.
-            </p>
+            <div className="glass-card inline-block px-6 py-3 rounded-full">
+              <p className="text-white/90 text-sm font-medium">
+                <Sparkles className="w-4 h-4 inline mr-2 text-brand-green-light" />
+                Free to explore. No sign up required.
+              </p>
+            </div>
           </div>
 
           {/* Right Column - Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative group">
+            <div className="relative group animate-float">
+              <div className="absolute -inset-4 bg-gradient-glow rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
               <img 
                 src={heroWellnessPro} 
-                alt="Wellness Professional" 
-                className="rounded-2xl shadow-strong max-w-lg w-full transform group-hover:scale-105 transition-transform duration-300"
+                alt="Wellness Professional providing personalized health guidance" 
+                className="relative rounded-3xl shadow-strong max-w-lg w-full transform group-hover:scale-105 transition-transform duration-500"
               />
               <Badge 
                 variant="secondary" 
-                className="absolute top-4 left-4 bg-brand-green text-white shadow-medium px-4 py-2 text-sm font-semibold border border-white/20 backdrop-blur-sm animate-pulse"
+                className="absolute top-6 left-6 glass-card border-white/20 text-white shadow-glow px-6 py-3 text-base font-semibold animate-pulse-glow"
               >
-                ✨ Trusted by wellness seekers
+                <Sparkles className="w-4 h-4 mr-2" />
+                Trusted by wellness seekers
               </Badge>
             </div>
           </div>
