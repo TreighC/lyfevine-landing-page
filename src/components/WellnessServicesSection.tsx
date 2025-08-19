@@ -1,4 +1,4 @@
-import { Dumbbell, Brain, Heart, Lotus } from "lucide-react";
+import { Dumbbell, Brain, Heart, Sparkles } from "lucide-react";
 
 const WellnessServicesSection = () => {
   const services = [
@@ -33,7 +33,7 @@ const WellnessServicesSection = () => {
       gradient: "from-pink-400 to-rose-500"
     },
     {
-      icon: Lotus,
+      icon: Sparkles,
       title: "Spiritual Health",
       description: "Connect with purpose, find inner peace, and explore spiritual growth",
       gradient: "from-green-400 to-teal-500"
