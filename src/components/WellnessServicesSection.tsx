@@ -1,5 +1,7 @@
 import { Dumbbell, Brain, Heart, Sparkles } from "lucide-react";
 
+console.log("WellnessServicesSection loaded successfully");
+
 const WellnessServicesSection = () => {
   const services = [
     "Personal Training",
