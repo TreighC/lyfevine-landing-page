@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import lyfevineLogoIcon from "@/assets/lyfevine-logo.png";
 import lyfevineText from "@/assets/lyfevine-text.png";
 
+
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
