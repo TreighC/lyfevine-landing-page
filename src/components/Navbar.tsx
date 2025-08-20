@@ -22,7 +22,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-8 floating-nav rounded-full px-8 py-3">
+          <div className="hidden md:flex items-center gap-8">
             <a href="#browse" className="text-white/90 hover:text-white font-medium transition-all duration-300 hover:scale-105">
               Browse
             </a>
