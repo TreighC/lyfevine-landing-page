@@ -74,7 +74,7 @@ const HeroSection = () => {
               />
               <Badge 
                 variant="secondary" 
-                className="absolute -bottom-3 left-4 bg-brand-green hover:bg-brand-green-dark text-white border border-white shadow-glow px-4 py-2 text-sm font-semibold animate-float transition-colors duration-300"
+                className="absolute -bottom-3 left-4 bg-brand-green hover:bg-brand-green-dark text-white border border-white shadow-glow px-4 py-2 text-sm font-semibold transition-colors duration-300"
               >
                 <ShieldCheck className="w-4 h-4 mr-1" />
                 Verified pros
