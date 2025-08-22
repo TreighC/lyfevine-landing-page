@@ -74,9 +74,9 @@ const HeroSection = () => {
               />
               <Badge 
                 variant="secondary" 
-                className="absolute bottom-8 right-4 glass-card border-white/20 text-white shadow-glow px-4 py-2 text-sm font-semibold animate-pulse-glow"
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-brand-green hover:bg-brand-green-dark text-white border-2 border-white shadow-strong px-6 py-3 text-base font-bold animate-pulse scale-110 hover:scale-125 transition-all duration-300"
               >
-                <ShieldCheck className="w-4 h-4 mr-2" />
+                <ShieldCheck className="w-5 h-5 mr-2" />
                 Verified pros
               </Badge>
             </div>
