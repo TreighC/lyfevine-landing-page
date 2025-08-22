@@ -2,25 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, ShieldCheck, Sparkles } from "lucide-react";
 import heroWellnessPro from "@/assets/hero-wellness-pro.jpg";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <video 
-        className="absolute inset-0 w-full h-full object-cover scale-105"
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-      >
-        <source src="/wellness-hero-video.mp4" type="video/mp4" />
-        <source src="/placeholder-wellness-video.mp4" type="video/mp4" />
-      </video>
-      
-      {/* Dynamic Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
-      <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
+      {/* Animated Gradient Background */}
+      <BackgroundGradientAnimation
+        containerClassName="absolute inset-0"
+        className="absolute inset-0"
+        interactive={true}
+      />
 
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
