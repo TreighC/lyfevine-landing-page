@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Play, Sparkles } from "lucide-react";
+import { Play, ShieldCheck, Sparkles } from "lucide-react";
 import heroWellnessPro from "@/assets/hero-wellness-pro.jpg";
 
 const HeroSection = () => {
@@ -74,10 +74,10 @@ const HeroSection = () => {
               />
               <Badge 
                 variant="secondary" 
-                className="absolute top-6 left-6 glass-card border-white/20 text-white shadow-glow px-6 py-3 text-base font-semibold animate-pulse-glow"
+                className="absolute bottom-8 right-4 glass-card border-white/20 text-white shadow-glow px-4 py-2 text-sm font-semibold animate-pulse-glow"
               >
-                <Sparkles className="w-4 h-4 mr-2" />
-                Trusted by wellness seekers
+                <ShieldCheck className="w-4 h-4 mr-2" />
+                Verified pros
               </Badge>
             </div>
           </div>
