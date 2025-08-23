@@ -30,12 +30,21 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-32 relative overflow-hidden">
-      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
+    <section id="why-lyfevine" className="py-32 relative overflow-hidden bg-background">
+      <BackgroundGradientAnimation 
+        containerClassName="absolute inset-0" 
+        gradientBackgroundStart="hsl(var(--background))"
+        gradientBackgroundEnd="hsl(var(--surface))"
+        firstColor="210, 81%, 25%"
+        secondColor="142, 71%, 35%"
+        thirdColor="142, 71%, 45%"
+        fourthColor="160, 50%, 40%"
+        fifthColor="142, 100%, 75%"
+        interactive={false}
+      />
       
-      {/* Floating shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-glow rounded-full blur-xl animate-float opacity-20 z-20"></div>
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl animate-float opacity-10 z-20" style={{ animationDelay: '1s' }}></div>
+      {/* Subtle overlay for better text contrast */}
+      <div className="absolute inset-0 bg-background/60 z-10"></div>
       
       <div className="container mx-auto px-6 relative z-20">
         <div className="text-center mb-24">

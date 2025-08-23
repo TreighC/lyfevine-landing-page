@@ -4,16 +4,23 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 
 const CallToActionSection = () => {
   return (
-    <section className="py-32 text-white relative overflow-hidden">
-      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-glow opacity-30"></div>
-        <div className="absolute top-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-brand-green-light/20 rounded-full blur-2xl animate-float"></div>
-      </div>
+    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-surface to-brand-navy">
+      <BackgroundGradientAnimation 
+        containerClassName="absolute inset-0" 
+        gradientBackgroundStart="hsl(var(--surface))"
+        gradientBackgroundEnd="hsl(210, 81%, 21%)"
+        firstColor="210, 81%, 18%"
+        secondColor="142, 71%, 45%"
+        thirdColor="142, 71%, 55%"
+        fourthColor="160, 50%, 50%"
+        fifthColor="142, 100%, 85%"
+        interactive={false}
+      />
+      
+      {/* Darker overlay for white text contrast */}
+      <div className="absolute inset-0 bg-brand-navy/80 z-10"></div>
 
-      <div className="container mx-auto px-6 text-center relative z-30">
+      <div className="container mx-auto px-6 text-center relative z-20 text-white">
         <div className="max-w-5xl mx-auto">
           {/* Main Content */}
           <div className="mb-16">

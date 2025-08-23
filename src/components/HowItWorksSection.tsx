@@ -27,15 +27,23 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-32 text-white relative overflow-hidden">
-      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-glow rounded-full blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-green-light rounded-full blur-2xl opacity-20 animate-float"></div>
-      </div>
+    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-background to-surface">
+      <BackgroundGradientAnimation 
+        containerClassName="absolute inset-0" 
+        gradientBackgroundStart="hsl(var(--background))"
+        gradientBackgroundEnd="hsl(var(--surface))"
+        firstColor="210, 81%, 23%"
+        secondColor="142, 71%, 40%"
+        thirdColor="142, 71%, 50%"
+        fourthColor="160, 50%, 44%"
+        fifthColor="142, 100%, 80%"
+        interactive={false}
+      />
+      
+      {/* Dark overlay for white text contrast */}
+      <div className="absolute inset-0 bg-brand-navy/70 z-10"></div>
 
-      <div className="container mx-auto px-6 relative z-30">
+      <div className="container mx-auto px-6 relative z-20 text-white">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in">
             Get Started in <span className="gradient-text">Minutes</span>

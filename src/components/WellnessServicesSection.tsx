@@ -44,13 +44,21 @@ const WellnessServicesSection = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden">
-      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-20">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-glow rounded-full blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
+    <section className="py-32 relative overflow-hidden bg-surface">
+      <BackgroundGradientAnimation 
+        containerClassName="absolute inset-0" 
+        gradientBackgroundStart="hsl(var(--surface))"
+        gradientBackgroundEnd="hsl(var(--background))"
+        firstColor="210, 81%, 24%"
+        secondColor="142, 71%, 42%"
+        thirdColor="142, 71%, 52%"
+        fourthColor="160, 50%, 48%"
+        fifthColor="142, 100%, 82%"
+        interactive={false}
+      />
+      
+      {/* Subtle overlay for better contrast */}
+      <div className="absolute inset-0 bg-surface/60 z-10"></div>
 
       <div className="container mx-auto px-6 relative z-30">
         {/* Header */}
