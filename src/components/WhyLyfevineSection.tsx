@@ -1,4 +1,5 @@
 import { Check, Sparkles, Users, Shield, Heart } from "lucide-react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const WhyLyfevineSection = () => {
   const benefits = [
@@ -29,20 +30,14 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-32 bg-gradient-to-br from-surface via-surface-alt to-background relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{ 
-          backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--brand-green)) 2px, transparent 0)`, 
-          backgroundSize: '40px 40px' 
-        }}></div>
-      </div>
+    <section id="why-lyfevine" className="py-32 relative overflow-hidden">
+      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
       
       {/* Floating shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-glow rounded-full blur-xl animate-float opacity-20"></div>
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl animate-float opacity-10" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-glow rounded-full blur-xl animate-float opacity-20 z-20"></div>
+      <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl animate-float opacity-10 z-20" style={{ animationDelay: '1s' }}></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="text-center mb-24">
           <div className="inline-block p-1 bg-gradient-brand rounded-full mb-8 animate-pulse-glow">
             <div className="bg-surface px-8 py-3 rounded-full">

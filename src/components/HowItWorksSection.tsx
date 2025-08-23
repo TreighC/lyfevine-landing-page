@@ -1,4 +1,5 @@
 import { Search, UserPlus, Rocket, ArrowRight } from "lucide-react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -26,14 +27,15 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-brand-navy via-brand-navy to-brand-green-dark text-white relative overflow-hidden">
+    <section className="py-32 text-white relative overflow-hidden">
+      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
       {/* Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-glow rounded-full blur-3xl opacity-10 animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-green-light rounded-full blur-2xl opacity-20 animate-float"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-30">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in">
             Get Started in <span className="gradient-text">Minutes</span>

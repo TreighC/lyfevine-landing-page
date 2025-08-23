@@ -1,4 +1,5 @@
 import { Shield, UserCheck, Calendar, CreditCard } from "lucide-react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const CoreBenefitsSection = () => {
   const benefits = [
@@ -25,8 +26,9 @@ const CoreBenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-brand-navy to-brand-green-dark text-white">
-      <div className="container mx-auto px-6">
+    <section className="py-20 text-white relative overflow-hidden">
+      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <div 

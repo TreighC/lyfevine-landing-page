@@ -1,4 +1,5 @@
 import { Dumbbell, Brain, Heart, Sparkles } from "lucide-react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 console.log("WellnessServicesSection loaded successfully");
 
@@ -43,14 +44,15 @@ const WellnessServicesSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-surface to-background relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden">
+      <BackgroundGradientAnimation containerClassName="absolute inset-0" />
       {/* Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-20">
         <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-glow rounded-full blur-3xl opacity-20 animate-float"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-accent rounded-full blur-2xl opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-30">
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-fade-in">
