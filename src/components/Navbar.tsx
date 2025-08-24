@@ -8,16 +8,19 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3 z-50">
+          <div className="flex items-center gap-3 z-50 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/15 to-white/20 rounded-xl blur-sm"></div>
             <img 
               src={lyfevineLogoIcon} 
               alt="Lyfevine Logo" 
-              className="h-12 w-12 rounded-full shadow-strong drop-shadow-2xl"
+              className="h-12 w-12 rounded-full relative z-10"
+              style={{ filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.5)) drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}
             />
             <img 
               src={lyfevineText} 
               alt="Lyfevine" 
-              className="h-8 drop-shadow-2xl filter contrast-125 brightness-110"
+              className="h-8 relative z-10"
+              style={{ filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.6)) drop-shadow(0 1px 3px rgba(0,0,0,0.4))' }}
             />
           </div>
 
