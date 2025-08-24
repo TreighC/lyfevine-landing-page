@@ -30,36 +30,36 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-32 relative overflow-hidden bg-background">
+    <section id="why-lyfevine" className="py-32 relative overflow-hidden bg-gradient-section-1">
       <BackgroundGradientAnimation 
         containerClassName="absolute inset-0" 
         gradientBackgroundStart="hsl(var(--background))"
         gradientBackgroundEnd="hsl(var(--surface))"
-        firstColor="210, 81%, 25%"
-        secondColor="142, 71%, 35%"
+        firstColor="210, 81%, 35%"
+        secondColor="142, 71%, 50%"
         thirdColor="142, 71%, 45%"
-        fourthColor="160, 50%, 40%"
-        fifthColor="142, 100%, 75%"
+        fourthColor="160, 50%, 45%"
+        fifthColor="142, 100%, 85%"
         interactive={false}
       />
       
-      {/* Subtle overlay for better text contrast */}
-      <div className="absolute inset-0 bg-background/60 z-10"></div>
+      {/* Enhanced overlay for better text contrast */}
+      <div className="absolute inset-0 bg-background/75 z-10"></div>
       
       <div className="container mx-auto px-6 relative z-20">
         <div className="text-center mb-24">
           <div className="inline-block p-1 bg-gradient-brand rounded-full mb-8 animate-pulse-glow">
             <div className="bg-surface px-8 py-3 rounded-full">
-              <span className="text-brand-green font-bold text-lg">Why Choose Lyfevine?</span>
+              <span className="text-brand-green font-bold text-lg text-contrast">Why Choose Lyfevine?</span>
             </div>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-            Feel better, move better,<br />
-            <span className="gradient-text">live better</span>
-          </h2>
-          <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            With guidance that fits your life, goals, and schedule.
-          </p>
+           <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight text-contrast">
+             Feel better, move better,<br />
+             <span className="gradient-text">live better</span>
+           </h2>
+           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-contrast">
+             With guidance that fits your life, goals, and schedule.
+           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -73,9 +73,9 @@ const WhyLyfevineSection = () => {
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-brand rounded-2xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300 shadow-glow">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-foreground font-semibold leading-relaxed text-xl group-hover:text-brand-green transition-colors duration-300">
-                  {benefit.text}
-                </p>
+                 <p className="text-foreground font-semibold leading-relaxed text-xl group-hover:text-brand-green transition-colors duration-300 text-contrast">
+                   {benefit.text}
+                 </p>
               </div>
             ))}
           </div>

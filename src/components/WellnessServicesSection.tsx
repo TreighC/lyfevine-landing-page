@@ -44,26 +44,26 @@ const WellnessServicesSection = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden bg-surface">
+    <section className="py-32 relative overflow-hidden bg-gradient-section-4">
       <BackgroundGradientAnimation 
         containerClassName="absolute inset-0" 
-        gradientBackgroundStart="hsl(var(--surface))"
-        gradientBackgroundEnd="hsl(var(--background))"
-        firstColor="210, 81%, 24%"
+        gradientBackgroundStart="hsl(var(--brand-navy) / 0.03)"
+        gradientBackgroundEnd="hsl(var(--brand-navy) / 0.05)"
+        firstColor="210, 81%, 28%"
         secondColor="142, 71%, 42%"
-        thirdColor="142, 71%, 52%"
-        fourthColor="160, 50%, 48%"
-        fifthColor="142, 100%, 82%"
+        thirdColor="142, 71%, 46%"
+        fourthColor="160, 50%, 42%"
+        fifthColor="142, 100%, 85%"
         interactive={false}
       />
       
-      {/* Subtle overlay for better contrast */}
-      <div className="absolute inset-0 bg-surface/60 z-10"></div>
+      {/* Enhanced subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-background/80 z-10"></div>
 
       <div className="container mx-auto px-6 relative z-30">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-fade-in">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-fade-in text-contrast">
             Explore Health & <span className="gradient-text">Wellness Services</span>
           </h2>
           
@@ -72,7 +72,7 @@ const WellnessServicesSection = () => {
             {services.map((service, index) => (
               <span 
                 key={index}
-                className="glass-card px-6 py-3 rounded-full text-foreground font-medium border border-border/50 hover:border-brand-green/50 transition-all duration-300 hover:scale-105 hover:shadow-glow animate-slide-up"
+                className="glass-card px-6 py-3 rounded-full text-foreground font-medium border border-border/50 hover:border-brand-green/50 transition-all duration-300 hover:scale-105 hover:shadow-glow animate-slide-up text-contrast"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {service}
@@ -80,7 +80,7 @@ const WellnessServicesSection = () => {
             ))}
           </div>
 
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-contrast">
             Whether you're ready to dive in or just browsing for inspiration, Lyfevine offers a wide range of services to support your lifestyle.
           </p>
         </div>
@@ -102,10 +102,10 @@ const WellnessServicesSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-brand-green transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-brand-green transition-colors text-contrast">
                   {category.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-contrast">
                   {category.description}
                 </p>
               </div>

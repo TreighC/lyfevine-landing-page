@@ -26,21 +26,21 @@ const CoreBenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-surface">
+    <section className="py-20 relative overflow-hidden bg-gradient-section-2">
       <BackgroundGradientAnimation 
         containerClassName="absolute inset-0" 
         gradientBackgroundStart="hsl(var(--surface))"
         gradientBackgroundEnd="hsl(var(--background))"
-        firstColor="210, 81%, 20%"
-        secondColor="142, 71%, 40%"
+        firstColor="210, 81%, 30%"
+        secondColor="142, 71%, 45%"
         thirdColor="142, 71%, 50%"
         fourthColor="160, 50%, 45%"
-        fifthColor="142, 100%, 80%"
+        fifthColor="142, 100%, 85%"
         interactive={false}
       />
       
-      {/* Overlay for text contrast */}
-      <div className="absolute inset-0 bg-surface/70 z-10"></div>
+      {/* Enhanced overlay for text contrast */}
+      <div className="absolute inset-0 bg-surface/80 z-10"></div>
       
       <div className="container mx-auto px-6 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -52,12 +52,12 @@ const CoreBenefitsSection = () => {
               <div className="w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-glow">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">
-                {benefit.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
+               <h3 className="text-xl font-semibold mb-3 text-foreground text-contrast">
+                 {benefit.title}
+               </h3>
+               <p className="text-muted-foreground leading-relaxed text-contrast">
+                 {benefit.description}
+               </p>
             </div>
           ))}
         </div>

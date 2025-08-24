@@ -4,30 +4,30 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 
 const CallToActionSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-surface to-brand-navy">
+    <section className="py-32 relative overflow-hidden bg-gradient-section-final">
       <BackgroundGradientAnimation 
         containerClassName="absolute inset-0" 
-        gradientBackgroundStart="hsl(var(--surface))"
-        gradientBackgroundEnd="hsl(210, 81%, 21%)"
-        firstColor="210, 81%, 18%"
-        secondColor="142, 71%, 45%"
-        thirdColor="142, 71%, 55%"
-        fourthColor="160, 50%, 50%"
-        fifthColor="142, 100%, 85%"
+        gradientBackgroundStart="hsl(var(--brand-navy) / 0.05)"
+        gradientBackgroundEnd="hsl(var(--brand-navy))"
+        firstColor="210, 81%, 20%"
+        secondColor="142, 71%, 40%"
+        thirdColor="142, 71%, 50%"
+        fourthColor="160, 50%, 45%"
+        fifthColor="142, 100%, 80%"
         interactive={false}
       />
       
-      {/* Darker overlay for white text contrast */}
-      <div className="absolute inset-0 bg-brand-navy/80 z-10"></div>
+      {/* Enhanced darker overlay for white text contrast */}
+      <div className="absolute inset-0 bg-brand-navy/85 z-10"></div>
 
       <div className="container mx-auto px-6 text-center relative z-20 text-white">
         <div className="max-w-5xl mx-auto">
           {/* Main Content */}
           <div className="mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in">
+            <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in text-contrast-light">
               Ready to Start Your <span className="text-brand-green-light">Wellness Journey?</span>
             </h2>
-            <p className="text-2xl text-white/90 mb-16 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-2xl text-white/95 mb-16 leading-relaxed max-w-3xl mx-auto text-contrast-light">
               Join thousands who are already improving their health and wellness with Lyfevine.
             </p>
 
@@ -53,7 +53,7 @@ const CallToActionSection = () => {
 
             {/* Social Proof */}
             <div className="glass-card inline-block px-8 py-4 rounded-full mb-12">
-              <p className="text-white/90 font-medium text-lg">
+              <p className="text-white/95 font-medium text-lg text-contrast-light">
                 <Sparkles className="w-5 h-5 inline mr-2 text-brand-green-light" />
                 Join 10,000+ wellness seekers already on their journey
               </p>
@@ -63,12 +63,12 @@ const CallToActionSection = () => {
           {/* Professional CTA */}
           <div className="pt-8 border-t border-white/20">
             <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
-              <p className="text-white/90 text-xl mb-4">
+              <p className="text-white/95 text-xl mb-4 text-contrast-light">
                 Are you a wellness professional?
               </p>
               <a 
                 href="#" 
-                className="inline-flex items-center text-brand-green-light hover:text-white transition-colors text-xl font-semibold group"
+                className="inline-flex items-center text-brand-green-light hover:text-white transition-colors text-xl font-semibold group text-contrast-light"
               >
                 Join our platform and grow your practice
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

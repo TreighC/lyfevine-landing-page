@@ -27,30 +27,30 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-background to-surface">
+    <section className="py-32 relative overflow-hidden bg-gradient-section-3">
       <BackgroundGradientAnimation 
         containerClassName="absolute inset-0" 
         gradientBackgroundStart="hsl(var(--background))"
-        gradientBackgroundEnd="hsl(var(--surface))"
-        firstColor="210, 81%, 23%"
+        gradientBackgroundEnd="hsl(var(--brand-navy) / 0.05)"
+        firstColor="210, 81%, 25%"
         secondColor="142, 71%, 40%"
-        thirdColor="142, 71%, 50%"
-        fourthColor="160, 50%, 44%"
+        thirdColor="142, 71%, 45%"
+        fourthColor="160, 50%, 42%"
         fifthColor="142, 100%, 80%"
         interactive={false}
       />
       
-      {/* Dark overlay for white text contrast */}
-      <div className="absolute inset-0 bg-brand-navy/70 z-10"></div>
+      {/* Enhanced dark overlay for white text contrast */}
+      <div className="absolute inset-0 bg-brand-navy/75 z-10"></div>
 
       <div className="container mx-auto px-6 relative z-20 text-white">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in">
-            Get Started in <span className="gradient-text">Minutes</span>
-          </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Simple steps to connect with your perfect wellness professional
-          </p>
+           <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in text-contrast-light">
+             Get Started in <span className="text-brand-green-light">Minutes</span>
+           </h2>
+           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-contrast-light">
+             Simple steps to connect with your perfect wellness professional
+           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -82,12 +82,12 @@ const HowItWorksSection = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green-light transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-white/80 leading-relaxed text-lg">
-                    {step.description}
-                  </p>
+                   <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green-light transition-colors text-contrast-light">
+                     {step.title}
+                   </h3>
+                   <p className="text-white/90 leading-relaxed text-lg text-contrast-light">
+                     {step.description}
+                   </p>
                 </div>
               </div>
             ))}

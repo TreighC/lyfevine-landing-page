@@ -81,6 +81,11 @@ export default {
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-glass': 'var(--gradient-glass)',
 				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-section-1': 'var(--gradient-section-1)',
+				'gradient-section-2': 'var(--gradient-section-2)',
+				'gradient-section-3': 'var(--gradient-section-3)',
+				'gradient-section-4': 'var(--gradient-section-4)',
+				'gradient-section-final': 'var(--gradient-section-final)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
