@@ -8,16 +8,16 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3 z-50 px-3 py-1.5 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 shadow-soft">
+          <div className="flex items-center gap-3 z-50">
             <img 
               src={lyfevineLogoIcon} 
               alt="Lyfevine Logo" 
-              className="h-12 w-12 rounded-full shadow-medium"
+              className="h-12 w-12 rounded-full shadow-strong drop-shadow-2xl"
             />
             <img 
               src={lyfevineText} 
               alt="Lyfevine" 
-              className="h-8 drop-shadow-md"
+              className="h-8 drop-shadow-2xl filter contrast-125 brightness-110"
             />
           </div>
 
