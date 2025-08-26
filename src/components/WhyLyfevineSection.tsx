@@ -44,7 +44,7 @@ const WhyLyfevineSection = () => {
       />
       
       {/* Enhanced gradient overlay with both branded colors for better visual flow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/30 via-background/75 to-brand-green/25 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-navy/30 via-background/60 to-brand-green/35 z-10"></div>
       
       <div className="container mx-auto px-6 relative z-20">
         <div className="text-center mb-24">
