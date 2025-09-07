@@ -5,9 +5,9 @@ import lyfevineText from "@/assets/lyfevine-text.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-navy text-white relative">
+    <footer className="bg-gray-900 text-white relative border-t border-white/10">
       {/* Enhanced transition with branding */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-brand-navy/40 to-brand-navy/60"></div>
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-navy via-brand-green to-brand-navy"></div>
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
