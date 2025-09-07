@@ -49,13 +49,11 @@ const HowItWorksSection = () => {
                       {/* Glow effect background */}
                       <div className="absolute inset-0 bg-green-400/20 rounded-full blur-lg animate-pulse"></div>
                       {/* Arrow with brighter color */}
-                      <InteractiveAnimatedArrowIcon 
+                       <InteractiveAnimatedArrowIcon 
                         size={64} 
                         color="#10b981"
-                        autoplay={true}
-                        loop={true}
                         className="relative z-10 drop-shadow-lg"
-                      />
+                       />
                     </div>
                   </div>
                 )}

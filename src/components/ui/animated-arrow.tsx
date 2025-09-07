@@ -47,7 +47,7 @@ const AnimatedArrow: React.FC<AnimatedArrowProps> = ({
         />
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes arrowFlow {
           0%, 100% { 
             opacity: 0.4;
