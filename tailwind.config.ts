@@ -167,6 +167,11 @@ export default {
 					'0%': { transform: 'translateY(-50%)' },
 					'50%': { transform: 'translateY(50%)' },
 					'100%': { transform: 'translateY(-50%)' }
+				},
+				'gradient': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -181,7 +186,8 @@ export default {
 				'second': 'moveInCircle 20s reverse infinite',
 				'third': 'moveInCircle 40s linear infinite',
 				'fourth': 'moveHorizontal 40s ease infinite',
-				'fifth': 'moveInCircle 20s ease infinite'
+				'fifth': 'moveInCircle 20s ease infinite',
+				'gradient': 'gradient 8s linear infinite'
 			}
 		}
 	},

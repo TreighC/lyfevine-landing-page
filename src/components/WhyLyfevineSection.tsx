@@ -1,4 +1,5 @@
 import { Check, Sparkles, Users, Shield, Heart } from "lucide-react";
+import GradientText from "@/components/ui/gradient-text";
 
 const WhyLyfevineSection = () => {
   const benefits = [
@@ -32,10 +33,15 @@ const WhyLyfevineSection = () => {
     <section id="why-lyfevine" className="py-32 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-24">
-          <div className="inline-block p-1 bg-gradient-brand rounded-full mb-8 animate-pulse-glow">
-            <div className="bg-surface px-8 py-3 rounded-full">
-              <span className="text-brand-green font-bold text-lg text-contrast">Why Choose Lyfevine?</span>
-            </div>
+          <div className="mb-8">
+      <GradientText
+        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+        animationSpeed={6}
+        showBorder={true}
+        className="font-bold text-2xl"
+      >
+        Why Choose Lyfevine?
+      </GradientText>
           </div>
            <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight text-contrast">
              Feel better, move better,<br />

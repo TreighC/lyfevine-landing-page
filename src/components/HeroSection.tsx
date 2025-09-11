@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, ShieldCheck, Sparkles } from "lucide-react";
 import heroWellnessPro from "@/assets/hero-wellness-pro.jpg";
+import GradientText from "@/components/ui/gradient-text";
 
 const HeroSection = () => {
   return (
@@ -54,11 +55,14 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="glass-card inline-block px-6 py-3 rounded-full mx-auto lg:mx-0">
-              <p className="text-white/90 caption-text">
-                Free to explore. No sign up required.
-              </p>
-            </div>
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={6}
+              showBorder={false}
+              className="font-bold text-lg text-center mx-auto lg:mx-0 drop-shadow-lg"
+            >
+              Free to explore. No sign up required.
+            </GradientText>
           </div>
 
           {/* Right Column - Image */}
@@ -80,13 +84,38 @@ const HeroSection = () => {
               </div>
               
               {/* Enhanced badge positioning */}
-              <Badge 
-                variant="secondary" 
-                className="absolute -bottom-4 left-6 bg-brand-green hover:bg-brand-green-dark text-white border border-white shadow-glow px-5 py-3 text-sm font-semibold transition-all duration-300 hover:scale-105"
-              >
-                <ShieldCheck className="w-4 h-4 mr-2" />
-                Verified pros
-              </Badge>
+              <div className="absolute -bottom-3 left-4 bg-white/95 backdrop-blur-sm border-2 border-transparent shadow-glow px-4 py-2 text-sm font-bold transition-all duration-300 hover:scale-105 rounded-full overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-brand-green to-brand-green-light animate-gradient opacity-20"
+                  style={{
+                    background: 'linear-gradient(90deg, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa)',
+                    backgroundSize: '400% 100%',
+                    animation: 'gradient 6s ease-in-out infinite'
+                  }}
+                ></div>
+                <div className="flex items-center relative z-10">
+                  <div 
+                    className="w-4 h-4 mr-2"
+                    style={{
+                      background: 'linear-gradient(90deg, #059669, #2563eb, #059669, #2563eb, #059669)',
+                      backgroundSize: '400% 100%',
+                      animation: 'gradient 6s ease-in-out infinite',
+                      WebkitMask: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke-width=\'2\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' d=\'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z\'/%3E%3C/svg%3E") no-repeat center',
+                      mask: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke-width=\'2\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' d=\'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z\'/%3E%3C/svg%3E") no-repeat center',
+                      WebkitMaskSize: 'contain',
+                      maskSize: 'contain'
+                    }}
+                  />
+                  <GradientText
+                    colors={["#059669", "#2563eb", "#059669", "#2563eb", "#059669"]}
+                    animationSpeed={6}
+                    showBorder={false}
+                    className="text-base font-bold"
+                  >
+                    Verified pros
+                  </GradientText>
+                </div>
+              </div>
             </div>
           </div>
         </div>
