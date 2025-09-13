@@ -33,8 +33,20 @@ const CoreBenefitsSection = () => {
               key={index}
               className="text-center group hover:transform hover:scale-105 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-glow">
-                <benefit.icon className="w-8 h-8 text-white" />
+              <div 
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-glow"
+                style={{
+                  background: 'linear-gradient(90deg, #10b981, #1e40af, #10b981, #1e40af, #10b981)',
+                  backgroundSize: '400% 100%',
+                  animation: 'gradient 10s ease-in-out infinite'
+                }}
+              >
+                <benefit.icon 
+                  className="w-8 h-8 text-white drop-shadow-lg" 
+                  style={{
+                    filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.3))'
+                  }}
+                />
               </div>
                <h3 className="text-xl font-semibold mb-3 text-foreground text-contrast">
                  {benefit.title}

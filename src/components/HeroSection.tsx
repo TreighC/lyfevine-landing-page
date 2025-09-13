@@ -110,7 +110,7 @@ const HeroSection = () => {
                     colors={["#059669", "#2563eb", "#059669", "#2563eb", "#059669"]}
                     animationSpeed={6}
                     showBorder={false}
-                    className="text-base font-bold"
+                    className="text-lg font-bold"
                   >
                     Verified pros
                   </GradientText>
