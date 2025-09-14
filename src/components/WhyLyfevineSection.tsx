@@ -60,7 +60,7 @@ const WhyLyfevineSection = () => {
                 className="group flex items-start gap-6 p-10 glass-card rounded-3xl shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-3 border border-border/50 hover:border-brand-green/30 animate-slide-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-navy from-60% to-brand-green rounded-2xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-green from-40% to-brand-green-dark rounded-2xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300 shadow-glow">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                  <p className="text-foreground font-semibold leading-relaxed text-xl group-hover:text-brand-green transition-colors duration-300 text-contrast">

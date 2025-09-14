@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Enhanced transition with branding */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-navy via-brand-green to-brand-navy"></div>
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
@@ -32,10 +32,13 @@ const Footer = () => {
                 <span className="text-sm font-semibold">f</span>
               </div>
               <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-                <span className="text-sm font-semibold">t</span>
+                <span className="text-sm font-semibold">X</span>
               </div>
               <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-                <span className="text-sm font-semibold">in</span>
+                <span className="text-sm font-semibold">ig</span>
+              </div>
+              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+                <span className="text-sm font-semibold">tw</span>
               </div>
             </div>
           </div>
@@ -64,20 +67,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-semibold text-lg mb-6">Stay Updated</h3>
-            <p className="text-white/80 mb-4">Get wellness tips and platform updates delivered to your inbox.</p>
-            <div className="flex gap-2">
-              <Input 
-                placeholder="Enter your email" 
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
-              />
-              <Button className="bg-brand-green hover:bg-brand-green-dark">
-                Subscribe
-              </Button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
