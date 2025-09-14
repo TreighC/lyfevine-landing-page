@@ -4,7 +4,7 @@ import lyfevineText from "@/assets/lyfevine-text.png";
 
 const Navbar = () => {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-r from-white/15 via-white/10 to-white/15 backdrop-blur-xl border-b border-white/20 shadow-lg shadow-black/5">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-r from-white/25 via-white/15 to-white/25 backdrop-blur-3xl border-b border-white/30 shadow-2xl shadow-black/10 before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-transparent before:to-white/5 before:backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
