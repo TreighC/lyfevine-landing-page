@@ -30,9 +30,9 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-32 relative overflow-hidden bg-white">
+    <section id="why-lyfevine" className="py-16 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-24">
+        <div className="text-center mb-12">
           <div className="mb-8">
       <GradientText
         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}

@@ -27,9 +27,9 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden bg-brand-navy">
+    <section className="py-16 relative overflow-hidden bg-brand-navy">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10">
            <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in text-white">
              Get Started in <span className="text-brand-green-light">Minutes</span>
            </h2>

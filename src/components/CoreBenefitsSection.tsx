@@ -25,7 +25,7 @@ const CoreBenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gray-50">
+    <section className="py-10 relative overflow-hidden bg-gray-50">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (

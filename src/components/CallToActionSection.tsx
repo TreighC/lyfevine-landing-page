@@ -3,11 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 const CallToActionSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-brand-navy">
+    <section className="py-16 relative overflow-hidden bg-brand-navy">
       <div className="container mx-auto px-6 text-center relative z-10 text-white">
         <div className="max-w-5xl mx-auto">
           {/* Main Content */}
-          <div className="mb-16">
+          <div className="mb-8">
             <h2 className="text-5xl lg:text-6xl font-bold mb-8 animate-fade-in text-contrast-light">
               Ready to Start Your <span className="text-brand-green-light">Wellness Journey?</span>
             </h2>

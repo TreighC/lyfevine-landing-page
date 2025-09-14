@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-hero"></div>
       <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-16 lg:py-24">
+      <div className="relative z-10 container mx-auto px-6 py-8 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-10">
