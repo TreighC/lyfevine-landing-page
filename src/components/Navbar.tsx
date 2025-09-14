@@ -4,27 +4,21 @@ import lyfevineText from "@/assets/lyfevine-text.png";
 
 const Navbar = () => {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with Professional Background */}
-          <div className="flex items-center gap-3 relative group">
-            {/* Glass background container */}
-            <div className="absolute -inset-2 bg-white/60 backdrop-blur-lg rounded-xl shadow-lg border border-white/40 group-hover:bg-white/70 group-hover:shadow-xl transition-all duration-300"></div>
-            
-            {/* Logo and text */}
-            <div className="relative z-10 flex items-center gap-3 px-3 py-2">
-              <img 
-                src={lyfevineLogoIcon} 
-                alt="Lyfevine Logo" 
-                className="h-10 w-10 rounded-full"
-              />
-              <img 
-                src={lyfevineText} 
-                alt="Lyfevine" 
-                className="h-7"
-              />
-            </div>
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <img 
+              src={lyfevineLogoIcon} 
+              alt="Lyfevine Logo" 
+              className="h-10 w-10 rounded-full"
+            />
+            <img 
+              src={lyfevineText} 
+              alt="Lyfevine" 
+              className="h-7"
+            />
           </div>
 
           {/* Navigation Links */}
