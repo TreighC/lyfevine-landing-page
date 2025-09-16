@@ -41,7 +41,7 @@ const WellnessServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden bg-white">
+    <section className="py-24 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-10">

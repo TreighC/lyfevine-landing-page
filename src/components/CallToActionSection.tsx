@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const CallToActionSection = () => {
   return (
-    <section className="py-16 relative overflow-hidden bg-brand-navy">
+    <section className="py-20 relative overflow-hidden bg-brand-navy">
       <div className="container mx-auto px-6 text-center relative z-10 text-white">
         <div className="max-w-5xl mx-auto">
           {/* Main Content */}

@@ -30,7 +30,7 @@ const WhyLyfevineSection = () => {
   ];
 
   return (
-    <section id="why-lyfevine" className="py-16 relative overflow-hidden bg-white">
+    <section id="why-lyfevine" className="py-24 relative overflow-hidden bg-white">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <div className="mb-8">
@@ -60,8 +60,18 @@ const WhyLyfevineSection = () => {
                 className="group flex items-start gap-6 p-10 glass-card rounded-3xl shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-3 border border-border/50 hover:border-brand-green/30 animate-slide-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-green from-40% to-brand-green-dark rounded-2xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300 shadow-glow">
-                  <benefit.icon className="w-6 h-6 text-white" />
+                <div 
+                  className="flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300 shadow-glow"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981 0%, #10b981 50%, #1e40af 85%, #10b981 100%)'
+                  }}
+                >
+                  <benefit.icon 
+                    className="w-6 h-6 text-white drop-shadow-lg" 
+                    style={{
+                      filter: 'drop-shadow(0 0 4px rgba(0, 0, 0, 0.3))'
+                    }}
+                  />
                 </div>
                  <p className="text-foreground font-semibold leading-relaxed text-xl group-hover:text-brand-green transition-colors duration-300 text-contrast">
                    {benefit.text}

@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <video 
-        className="absolute inset-0 w-full h-full object-cover scale-105"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay 
         muted 
         loop 
@@ -28,12 +28,12 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-10">
             <div className="space-y-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl heading-hero text-white animate-fade-in">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl heading-hero text-white animate-fade-in drop-shadow-2xl">
                 Find Your Health &{" "}
-                <span className="gradient-text">Wellness Pro</span>
+                <span className="gradient-text drop-shadow-2xl">Wellness Pro</span>
               </h1>
               
-              <p className="text-lg sm:text-xl body-large text-white/90 animate-slide-in-left max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg sm:text-xl body-large text-white animate-slide-in-left max-w-2xl mx-auto lg:mx-0 drop-shadow-xl">
                 AI does the heavy lifting — helping you find a pro who aligns with your goals, 
                 your needs, and your life. Or, explore on your own.
               </p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm px-8 py-4 text-lg cta-text transition-all duration-300 hover:scale-105"
+                className="bg-white/20 border-white/50 text-white hover:bg-white/30 backdrop-blur-sm px-8 py-4 text-lg cta-text transition-all duration-300 hover:scale-105 drop-shadow-lg"
               >
                 Browse Pros
               </Button>
